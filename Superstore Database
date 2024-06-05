@@ -1,14 +1,18 @@
-SELECT * FROM superstore
-ORDER BY price desc; 
+SELECT item_name 
+FROM superstore
+ORDER BY price DESC; 
 
-SELECT MAX(price) FROM superstore;
 
-SELECT AVG(price) FROM superstore
-WHERE category = "Kitchen Supplies";
+SELECT AVG (price) 
+FROM superstore; 
 
-SELECT * FROM superstore 
-WHERE category = "Kitchen Supplies" 
-ORDER BY average_rating desc; 
 
-SELECT item_name FROM superstore 
-WHERE average_rating > 4.5;
+SELECT MAX (price) 
+FROM superstore
+WHERE category = "Kitchen Supplies"; 
+
+
+SELECT COUNT (stock_quantity)
+FROM superstore
+WHERE item_name = "Air Purifier"; 
+
